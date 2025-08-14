@@ -126,15 +126,9 @@ class Experiment(BaseExp):
 
         if self.opts.use_opt_flow_loss:
             self.RAFT_model = {
-                "dstereo": "Raft_Large_Weights.C_T_SKHT_K_V2",
                 "kitti": "Raft_Large_Weights.C_T_SKHT_K_V1",
                 "carla": "Raft_Large_Weights.C_T_SKHT_K_V1",
-                "carla2": "Raft_Large_Weights.C_T_SKHT_K_V1",
-                "argo2": "Raft_Large_Weights.C_T_SKHT_V1",
                 "torc": "Raft_Large_Weights.C_T_SKHT_K_V1",
-                "flyingthings": "Raft_Large_Weights.C_T_V1",
-                "sintel": "Raft_Large_Weights.C_T_SKHT_V1",
-                "hd1k": "Raft_Large_Weights.C_T_SKHT_V1",
             }
 
             self.opt_flow = TorchvisionRAFT(pretrained_weights=self.RAFT_model[self.opts.dataset])
@@ -178,7 +172,6 @@ class Experiment(BaseExp):
         dataset_dict = {
             "torc": dataset.StereoPoseDataset,
             "carla": dataset.CarlaStereoPoseDataset,
-            "carla2": dataset.CarlaStereoPose2Dataset,
             "kitti": dataset.KITTIDataset,
         }
 
