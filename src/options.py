@@ -229,7 +229,7 @@ class StereoPoseOptions:
             "--opt_flow_weights",
             type=str,
             help="path to load weights",
-            default="/nas/EOS/users/aman/checkpoints/RAFT/raft-things.pth",
+            default="/path/to/RAFT/raft-things.pth",
         )
 
         # SYSTEM options
