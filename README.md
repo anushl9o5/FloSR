@@ -81,14 +81,6 @@ bash src/experiemnts/<training/inference>/<exp>.sh
 
 The logs are stored in the location provied `--log_dir <path to logs>` in the respective `<exp>.sh` script. This is also the path where the checkpoints are saved after every epoch.
 
-From inside the container to run tensorboard
-
-```shell
-tensorboard --logdir <path to logs> --port <custom-port>
-```
-
-This allows you to access tensorboard using the `localhost:custom-port`
-
 ## Folder Structure
 
 `src/`
