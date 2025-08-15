@@ -98,8 +98,8 @@ This allows you to access tensorboard using the `localhost:custom-port`
   - `training/` contains all experiment configs for training.
   - `inference/` contains all experment configs for inference.
 - `model/` contains the code for backbones and keypoint models.
-  - `gmflow/` main backbone model used for the original CVPR paper.
-  - `hsmnet/` legacy backbone, might still be useful since DenseDepth team uses hsmnet. **Not** as performant as `gmflow` backbone
+  - `gmflow/` main backbone model used for the CVPR paper.
+  - `hsmnet/` **Not** as performant as `gmflow` backbone.
   - `keypoint/` contains wrapper for `LOFTR` and implementation of `SuperGlue` which is important for reporting keypoint offset metrics.
 - `utility/` contains the functions for logging, differentiable rectification and the optical flow loss wrapper.
 
